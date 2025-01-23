@@ -1,6 +1,15 @@
-from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
+from PySide6.QtWidgets import QApplication
 import sys
 
+from components.button_holder import ButtonHolder
+app = QApplication(sys.argv)
+
+window = ButtonHolder()
+window.show()
+app.exec()
+
+
+'''
 class ButtonHolder(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -15,9 +24,7 @@ app = QApplication(sys.argv)
 window = ButtonHolder()
 window.show()
 app.exec()
-
-
-
+'''
 
 '''
 # contains only global scope 
