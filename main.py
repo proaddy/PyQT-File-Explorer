@@ -2,13 +2,22 @@ from PySide6.QtWidgets import QApplication, QPushButton, QSlider, QWidget
 import sys
 
 
+
+from components.main_window import MainWindow
+app = QApplication(sys.argv)
+window = MainWindow(app)
+window.show()
+app.exec()
+
+
+'''
+# importing widgets
 from components.rockwidget import RockWidget
 app = QApplication(sys.argv)
 window = RockWidget()
 window.show()
-
 app.exec()
-
+'''
 
 
 '''
