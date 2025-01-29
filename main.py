@@ -2,13 +2,22 @@ from PySide6.QtWidgets import QApplication, QPushButton, QSlider, QWidget
 import sys
 
 
+from components.message_box_widget import MessageBox
+app = QApplication(sys.argv)
+widget = MessageBox()
+widget.show()
+app.exec()
 
+
+
+'''
+# working with main window
 from components.main_window import MainWindow
 app = QApplication(sys.argv)
 window = MainWindow(app)
 window.show()
 app.exec()
-
+'''
 
 '''
 # importing widgets

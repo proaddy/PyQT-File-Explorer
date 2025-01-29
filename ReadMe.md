@@ -18,7 +18,7 @@ From here we import all the things we need to build our application
 this is used to start the eventloop for the program and also handles all the events such as click, edit, type, keypresses, etc.
 
 #### QMainWindow, QPushButton
-Mainwindow and pushbutton are the widgets main windows is the windows which contains the minimize, maximize and close button.
+Mainwindow and pushbutton are the widgets. main windows is the window which contains the minimize, maximize, close button, toolbar, statusbar, and menu.
 Where as pushbutton is just a button you can give it height, and width, and change the text.
 
 QPushButton was derived from the Parent class QAbstractButton.
