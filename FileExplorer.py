@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QApplication, QMainWindow, QTreeView, QFileSystemModel, QVBoxLayout, QWidget, QHeaderView, QToolBar, QMessageBox, QInputDialog
-from PySide6.QtGui import QIcon, QAction, QCursor
+from PySide6.QtGui import QIcon, QAction
 import sys
 import shutil
 import os
@@ -108,11 +108,10 @@ class FileExplorer(QMainWindow):
         path = self.get_selected_path()
         if path:
             if os.path.exists(path):
-                print(path, os.path.isfile(path))
-                if os.path.isfile(path): # for windows
-                    subprocess.Popen(f'explorer /select,"{path}"')
-                else:
-                    subprocess.Popen(f'explorer "{path}"')
+                import pathlib
+                path_ = pathlib.Path(path)
+                print(f'Explorer.exe /root,"{path_}"')
+                subprocess.run(f'Explorer.exe /root,"{path_}"', shell=True)
             else:
                 print("Path does not exist")
         else:
