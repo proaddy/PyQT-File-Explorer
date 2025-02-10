@@ -1,3 +1,6 @@
+Simply run the FileExplorer.py file
+
+
 ## Qt
 [PySide6 Documentation](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/).
 
